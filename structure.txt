@@ -1,0 +1,31 @@
+
+/project-root
+│
+├── config
+│   ├── db.config.js
+│   ├── nodemailer.config.js
+│   └── passportGoogleMiddleware.js
+│
+├── controllers
+│   ├── auth.controller.js
+│   └── user.controller.js
+│
+├── middlewares
+│   ├── authMiddleware.js
+│   ├── errorHandlerMiddleware.js
+│   └── passportGoogleMiddleware.js
+│
+├── models
+│   ├── user.model.js
+│   └── verificationToken.model.js
+│
+├── routes
+│   ├── auth.routes.js
+│   └── user.routes.js
+│
+├── utils
+│   └── encryptPassword.js
+│
+├── .env
+├── index.js
+└── package.json
