@@ -14,14 +14,13 @@ export const signup = async (req, res, next) => {
   const { name, email, password, role } = req.body;
 
   try {
-    //create new user
-    const user = await userModel.create({ name, email, password, role });
-
     //if password is not provided
     if(!password){
       throw new CustomError("Password is required", 400);
     }
     
+    //create new user
+    const user = await userModel.create({ name, email, password, role });
 
     // generate verification token
     const verificationToken = crypto.randomBytes(40).toString("hex");
