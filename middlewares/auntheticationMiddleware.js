@@ -12,7 +12,7 @@ export const auntheticationMiddleware = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded.user;
 
-    console.log("decoded user: ", req.user);
+    //console.log("decoded user: ", req.user);
 
     if (!req.user) {
       return next(new CustomError("Token is not valid", 401));
